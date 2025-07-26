@@ -2,7 +2,7 @@ from twilio.rest import Client
 from datetime import datetime, timedelta
 import time
 
-# Twilio credentials
+
 accountsid = '#YOUR-CODE'
 authtoken = '#YOUR-TOKEN'
 
@@ -19,12 +19,11 @@ def send_message(reciver_number, message_s):
     except Exception as e:
         print(f'Error: {e}')  
 
-# Input section
 name = input('Enter the name of the person you want to send the message to: ')
 reciver_number = input("Enter the WhatsApp number of the recipient (include country code): ")
 message_s = input(f'Enter the message you want to send to {name}: ')
 
-# Input for schedule
+
 date_str = input("Enter the date you want to send the message (YYYY-MM-DD): ")
 time_str = input("Enter the time you want to send the message (HH:MM in 24-hour format): ")
 
