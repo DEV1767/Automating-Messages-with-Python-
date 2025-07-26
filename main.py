@@ -3,15 +3,15 @@ from datetime import datetime, timedelta
 import time
 
 # Twilio credentials
-accountsid = 'AC41bb49c887b347c094f7f52025436e3d'
-authtoken = '949783c71a5829de0c092dc99e82f81d'
+accountsid = '#YOUR-CODE'
+authtoken = '#YOUR-TOKEN'
 
 client = Client(accountsid, authtoken)
 
 def send_message(reciver_number, message_s):
     try:
         message = client.messages.create(
-            from_='whatsapp:+14155238886',  
+            from_='whatsapp:+YOUR NUMBER FROM TWILIO',  
             body=message_s,
             to=f'whatsapp:{reciver_number}'
         )
